@@ -1,0 +1,306 @@
+@font-face {
+  font-family: 'Olympic Branding';
+  src: url("../font/OlympicBranding/OlympicBranding.woff2") format("woff2"), url("../font/OlympicBranding/OlympicBranding.woff") format("woff"), url("../font/OlympicBranding/OlympicBranding.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: white; }
+
+button {
+  border: none; }
+
+button:focus,
+button:active,
+button:hover {
+  outline: none; }
+
+body {
+  width: 100%;
+  color: white; }
+  body header {
+    background-color: #943191;
+    color: #ffffff;
+    height: 80px;
+    margin: 0 auto; }
+    body header .header__wrapper {
+      width: 1100px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      body header .header__wrapper div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; }
+        body header .header__wrapper div .header__wrapper--logo {
+          font-family: "Olympic Branding", Arial, sans-serif;
+          font-size: 60px;
+          letter-spacing: 3.5px;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        body header .header__wrapper div form {
+          margin-left: 50px;
+          font-size: 0;
+          width: 340px;
+          height: 30px;
+          background-color: #943191;
+          position: relative; }
+          body header .header__wrapper div form input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 30px;
+            font-family: "PT Sans Narrow", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 2.8px;
+            text-align: center;
+            background-color: #ffffff;
+            border: none; }
+          body header .header__wrapper div form button {
+            position: absolute;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background: url("../img/search-icon.png") no-repeat center;
+            background-size: 25px 25px;
+            color: #ffffff; }
+          body header .header__wrapper div form button:hover {
+            border: 1px solid #ffffff;
+            cursor: pointer; }
+      body header .header__wrapper nav {
+        height: 100%; }
+        body header .header__wrapper nav ul {
+          list-style: none;
+          font-size: 0;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between; }
+          body header .header__wrapper nav ul li {
+            height: 80px;
+            width: 120px;
+            margin: 0;
+            font-family: "PT Sans Narrow", Arial, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 14px; }
+            body header .header__wrapper nav ul li a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+          body header .header__wrapper nav ul li:hover {
+            background-color: #ffffff;
+            cursor: pointer; }
+            body header .header__wrapper nav ul li:hover a {
+              color: #943191; }
+      body header .header__wrapper .basket {
+        width: 30px;
+        height: 30px;
+        background-color: #943191; }
+        body header .header__wrapper .basket .icon-shopping-basket {
+          color: #ffffff; }
+      body header .header__wrapper .basket:hover {
+        border: 1px solid #ffffff;
+        cursor: pointer; }
+  body .about {
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body .about .slider-container {
+      height: 500px;
+      width: 1100px;
+      position: relative;
+      overflow: hidden;
+      text-align: center; }
+    body .about .menu {
+      position: absolute;
+      left: 0;
+      z-index: 900;
+      width: 100%;
+      bottom: 0; }
+    body .about .menu label {
+      cursor: pointer;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-radius: 50px;
+      border: 2px solid #943191;
+      margin: 0 .2em 1em; }
+      body .about .menu label:hover {
+        background: #cf5398; }
+    body .about .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      z-index: 10;
+      padding: 8em 1em 0;
+      background-size: cover;
+      background-position: 50% 50%;
+      transition: left 0s .75s; }
+    body .about [id^="slide"]:checked + .slide {
+      left: 0;
+      z-index: 100;
+      transition: left .65s ease-out; }
+    body .about .slide-1 {
+      background-image: url("../img/yellow-slide.png"); }
+    body .about .slide-2 {
+      background-image: url("../img/blue-slider.png"); }
+    body .about .slide-3 {
+      background-image: url("../img/pink-slide.png"); }
+  body .products {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body .products .products__container {
+      margin: 100px 0;
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      grid-column-gap: 100px;
+      grid-row-gap: 100px; }
+      body .products .products__container .product__box {
+        height: 400px; }
+        body .products .products__container .product__box img {
+          width: 300px;
+          height: 300px; }
+        body .products .products__container .product__box .product__description .title {
+          color: #333333;
+          font-size: 20px; }
+        body .products .products__container .product__box .product__description .price {
+          color: #333333;
+          font-size: 32px; }
+        body .products .products__container .product__box button {
+          width: 300px;
+          height: 40px;
+          color: #cf5398;
+          font-weight: bold;
+          background-color: white;
+          border: 2px solid #cf5398; }
+        body .products .products__container .product__box button:hover {
+          background-color: #cf5398;
+          color: #ffffff; }
+  body .contact {
+    height: calc(100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body .contact .contact__container {
+      width: 1100px;
+      height: 600px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      body .contact .contact__container .map__container {
+        height: 600px;
+        width: 600px;
+        background-color: #cf5398;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        body .contact .contact__container .map__container .map {
+          width: 550px;
+          height: 550px;
+          background-color: #ffffff; }
+      body .contact .contact__container .contact__information {
+        height: 400px;
+        font-family: "PT Sans Narrow", Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        body .contact .contact__container .contact__information .information__wrapper h2 {
+          color: #cf5398;
+          font-size: 40px;
+          font-weight: bold; }
+        body .contact .contact__container .contact__information .information__wrapper p {
+          font-size: 18px;
+          color: #333333; }
+  body footer {
+    background-color: #56c4c6;
+    font-family: Arial, sans-serif;
+    font-size: 12px; }
+    body footer .footer__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+      body footer .footer__wrapper .footer__logo {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Olympic Branding", Arial, sans-serif;
+        font-size: 60px;
+        letter-spacing: 3.5px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      body footer .footer__wrapper .footer__social {
+        width: 190px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; }
+        body footer .footer__wrapper .footer__social .footer__social--facebook {
+          width: 40px;
+          height: 40px;
+          border: 2px solid white;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        body footer .footer__wrapper .footer__social .footer__social--instagram {
+          width: 40px;
+          height: 40px;
+          border: 2px solid white;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        body footer .footer__wrapper .footer__social .footer__social--twitter {
+          width: 40px;
+          height: 40px;
+          border: 2px solid white;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        body footer .footer__wrapper .footer__social .footer__social--youtube {
+          width: 40px;
+          height: 40px;
+          border: 2px solid white;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      body footer .footer__wrapper .footer__rights {
+        margin-bottom: 20px; }
+
+/*# sourceMappingURL=style.css.map */
