@@ -12,10 +12,12 @@ a,
 a:active,
 a:visited {
   text-decoration: none;
-  color: white; }
+  color: white;
+  cursor: pointer; }
 
 button {
-  border: none; }
+  border: none;
+  cursor: pointer; }
 
 button:focus,
 button:active,
@@ -113,11 +115,30 @@ body {
             body header .header__wrapper nav ul li:hover a {
               color: #943191; }
       body header .header__wrapper .basket {
-        width: 30px;
+        border: 1px solid #943191;
+        width: 200px;
         height: 30px;
-        background-color: #943191; }
+        background-color: #943191;
+        padding-left: 5px;
+        outline: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; }
         body header .header__wrapper .basket .icon-shopping-basket {
+          width: 30px;
           color: #ffffff; }
+        body header .header__wrapper .basket label {
+          margin-left: 5px;
+          width: 100%;
+          height: 100%;
+          background-color: #ffffff;
+          color: #333333;
+          font-family: "PT Sans Narrow", Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer; }
       body header .header__wrapper .basket:hover {
         border: 1px solid #ffffff;
         cursor: pointer; }
@@ -127,9 +148,10 @@ body {
     justify-content: center;
     align-items: center; }
     body .about .slider-container {
-      height: 500px;
+      height: 70vh;
       width: 1100px;
       position: relative;
+      overflow: hidden;
       text-align: center; }
     body .about .menu {
       position: absolute;
@@ -203,39 +225,97 @@ body {
           background-color: #cf5398;
           color: #ffffff; }
   body .contact {
-    height: calc(100vh);
+    background-color: #71dac6;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center; }
     body .contact .contact__container {
+      height: 80vh;
+      width: 1100px;
+      border: 2px solid #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      body .contact .contact__container form h3 {
+        font-family: "PT Sans Narrow", Arial, sans-serif;
+        font-size: 40px;
+        font-weight: bold; }
+      body .contact .contact__container form p {
+        font-family: "PT Sans Narrow", Arial, sans-serif;
+        font-size: 20px; }
+      body .contact .contact__container form .inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        display: grid;
+        grid-row-gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px; }
+        body .contact .contact__container form .inputs input {
+          height: 40px;
+          width: 600px;
+          border: none;
+          outline: none;
+          padding: 10px; }
+        body .contact .contact__container form .inputs input[placeholder] {
+          font-family: "PT Sans Narrow", Arial, sans-serif;
+          font-size: 20px; }
+        body .contact .contact__container form .inputs textarea {
+          padding: 10px;
+          min-height: 40px;
+          max-height: 350px;
+          min-width: 600px;
+          max-width: 600px;
+          border: none;
+          outline: none; }
+        body .contact .contact__container form .inputs textarea[placeholder] {
+          font-family: "PT Sans Narrow", Arial, sans-serif;
+          font-size: 20px; }
+      body .contact .contact__container form button {
+        width: 600px;
+        height: 70px;
+        font-family: "PT Sans Narrow", Arial, sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        background-color: #cf5398;
+        color: #ffffff; }
+  body .shop {
+    height: calc(100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body .shop .shop__container {
       width: 1100px;
       height: 600px;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between; }
-      body .contact .contact__container .map__container {
+      body .shop .shop__container .map__container {
         height: 600px;
         width: 600px;
         background-color: #cf5398;
         display: flex;
         justify-content: center;
         align-items: center; }
-        body .contact .contact__container .map__container .map {
+        body .shop .shop__container .map__container .map {
           width: 550px;
           height: 550px;
           background-color: #ffffff; }
-      body .contact .contact__container .contact__information {
+      body .shop .shop__container .shop__information {
         height: 400px;
         font-family: "PT Sans Narrow", Arial, sans-serif;
         display: flex;
         flex-direction: column;
         justify-content: space-between; }
-        body .contact .contact__container .contact__information .information__wrapper h2 {
+        body .shop .shop__container .shop__information .information__wrapper h2 {
           color: #cf5398;
           font-size: 40px;
           font-weight: bold; }
-        body .contact .contact__container .contact__information .information__wrapper p {
+        body .shop .shop__container .shop__information .information__wrapper p {
           font-size: 18px;
           color: #333333; }
   body footer {
